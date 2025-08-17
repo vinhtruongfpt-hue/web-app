@@ -2,11 +2,11 @@
 
 This project was automatically generated based on the following requirement:
 
-> lỗi còn rất nhiều , yêu cầu dev pull lại source về và fix các lỗi khi build 
+> Dev AI hãy pull branch <branch_name>, đọc feedback trên PR và tự động sửa các lỗi build, push lại lên GitHub.
 
 ## Stack
 
-The chosen stack for this project is: Unknown
+The chosen stack for this project is: **Stack:** Node.js + Express + React + Tailwind CSS
 
 ## Files
 
