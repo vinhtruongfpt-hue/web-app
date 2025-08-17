@@ -1,0 +1,11 @@
+**Stack:** Node.js + Express + React + Tailwind CSS
+
+### Rationale:
+
+1. **Node.js + Express**: This will serve as the backend to handle communication with GitHub's API for pulling branches, reading PR comments, and pushing changes back to the repository. Node.js is non-blocking and can handle asynchronous operations efficiently, which is crucial in dealing with GitHub API requests.
+
+2. **React**: The frontend will allow users to interact with the tool, possibly providing a dashboard to view build statuses, error messages, and a user interface to trigger actions.
+
+3. **Tailwind CSS**: This utility-first CSS framework will help in creating a responsive design easily, allowing developers to focus more on functionality than on styling.
+
+### Boilerplate File Set:
