@@ -2,7 +2,7 @@
 
 This project was automatically generated based on the following requirement:
 
-> Source code gặp lỗi không thể build được hãy kiểm tra lại và fix 
+> lỗi còn rất nhiều , yêu cầu dev pull lại source về và fix các lỗi khi build 
 
 ## Stack
 

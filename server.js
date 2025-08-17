@@ -1,21 +1,26 @@
 ```javascript
 const express = require('express');
-const cors = require('cors');
+const next = require('next');
 
-const app = express();
-const PORT = process.env.PORT || 5000;
+const dev = process.env.NODE_ENV !== 'production';
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
-// Middleware
-app.use(cors());
-app.use(express.json());
+app.prepare().then(() => {
+  const server = express();
 
-// Sample route
-app.get('/api/test', (req, res) => {
-  res.json({ message: 'API is working!' });
-});
+  // Define API routes
+  server.get('/api/example', (req, res) => {
+    res.json({ message: 'Hello from the API!' });
+  });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  server.all('*', (req, res) => {
+    return handle(req, res);
+  });
+
+  server.listen(3000, (err) => {
+    if (err) throw err;
+    console.log('> Ready on http://localhost:3000');
+  });
 });
 ```
