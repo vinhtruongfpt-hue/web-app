@@ -1,0 +1,7 @@
+```
+fastapi
+uvicorn
+``` 
+
+### Summary
+This boilerplate allows developers to upload their source code files via a React frontend. The FastAPI backend receives the uploaded files for analysis, and here we demonstrate a simple response for the file size. The application can be further built upon to add more specific capabilities related to source code analysis and debugging tasks.
