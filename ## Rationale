@@ -1,0 +1,8 @@
+For the product requirement of creating a web application similar to Quizlet, I suggest using **ReactJS** for the frontend due to its component-based architecture and popularity for building interactive UI applications. Additionally, **Tailwind CSS** will be utilized for styling to provide a utility-first design that allows for rapid prototyping and a responsive layout. For the backend, **Node.js** with **Express** is a great fit as it provides a lightweight and efficient way to handle requests and serve APIs.
+
+## Stack
+**react+tailwind+node+express**
+
+---
+
+### Boilerplate File Set
