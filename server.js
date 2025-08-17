@@ -1,26 +1,39 @@
 ```javascript
 const express = require('express');
-const next = require('next');
+const bodyParser = require('body-parser');
+const { Octokit } = require('@octokit/rest');
 
-const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev });
-const handle = app.getRequestHandler();
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-app.prepare().then(() => {
-  const server = express();
+app.use(bodyParser.json());
 
-  // Define API routes
-  server.get('/api/example', (req, res) => {
-    res.json({ message: 'Hello from the API!' });
-  });
+const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
-  server.all('*', (req, res) => {
-    return handle(req, res);
-  });
+// Endpoint to pull branch and read feedback
+app.post('/api/pull-branch', async (req, res) => {
+    const { owner, repo, branch_name } = req.body;
+    try {
+        // Pull branch logic here using octokit
+        // e.g., fetch PR comments and pull the branch
+        res.status(200).send('Branch pulled and feedback read.');
+    } catch (error) {
+        res.status(500).send('Error pulling branch: ' + error.message);
+    }
+});
 
-  server.listen(3000, (err) => {
-    if (err) throw err;
-    console.log('> Ready on http://localhost:3000');
-  });
+// Endpoint to push changes
+app.post('/api/push-changes', async (req, res) => {
+    const { owner, repo, changes } = req.body;
+    try {
+        // Logic to push changes back to GitHub
+        res.status(200).send('Changes pushed back to GitHub.');
+    } catch (error) {
+        res.status(500).send('Error pushing changes: ' + error.message);
+    }
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
 });
 ```
