@@ -1,0 +1,11 @@
+For this product requirement, which seems to involve identifying and resolving build issues in source code, a simple web application that allows developers to upload their source code files for analysis and troubleshooting would be helpful. Given this context, I recommend using:
+
+- **Frontend Framework**: React (popular for building user interfaces and can easily integrate with various libraries).
+- **Backend Framework**: FastAPI (lightweight and efficient for creating APIs, especially for processing source code).
+
+This stack allows for creating a responsive main interface for file uploads and a fast backend for processing the uploaded files and returning errors/warnings related to build issues.
+
+### Stack
+`react+fastapi`
+
+### Boilerplate File Set

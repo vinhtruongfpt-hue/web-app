@@ -2,7 +2,7 @@
 
 This project was automatically generated based on the following requirement:
 
-> Tạo một ứng dụng web ReactJS mới giống trang quizzlet
+> Source code gặp lỗi không thể build được hãy kiểm tra lại và fix 
 
 ## Stack
 
