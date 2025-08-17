@@ -1,0 +1,8 @@
+For the given product requirement, we need to create a web application similar to Quizlet, which is mainly a flashcard and studying tool. The most suitable stack for this kind of application would be **React** for the front end to build a dynamic and interactive user interface, and **Node.js** with **Express** for the backend to handle requests and manage data efficiently. This allows us to create a Single Page Application (SPA) that provides a smooth user experience.
+
+### Stack
+
+- Frontend: React
+- Backend: Node.js + Express
+
+### Boilerplate Files
