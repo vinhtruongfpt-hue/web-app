@@ -1,8 +1,11 @@
-For the given product requirement, it seems like you need a simple web application that allows users to upload their source code for checking and fixing build errors. The ideal stack for this requirement would be **Next.js with FastAPI**. 
+For this product requirement, which seems to involve identifying and resolving build issues in source code, a simple web application that allows developers to upload their source code files for analysis and troubleshooting would be helpful. Given this context, I recommend using:
 
-- **Next.js** is a React-based framework that provides server-side rendering, static site generation, and API routes out-of-the-box, making it great for a full-stack application.
-- **FastAPI** is a modern web framework for building APIs in Python based on standard Python type hints, which will allow for quick error checking and reporting.
+- **Frontend Framework**: React (popular for building user interfaces and can easily integrate with various libraries).
+- **Backend Framework**: FastAPI (lightweight and efficient for creating APIs, especially for processing source code).
 
-This stack is chosen for its robustness, ease of development, and the ability to handle both the frontend user interface and backend API seamlessly.
+This stack allows for creating a responsive main interface for file uploads and a fast backend for processing the uploaded files and returning errors/warnings related to build issues.
 
-### Proposed Boilerplate File Set
+### Stack
+`react+fastapi`
+
+### Boilerplate File Set
